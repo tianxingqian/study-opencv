@@ -25,9 +25,10 @@ def video_demo():
 src = cv.imread("D:/vcprojects/images/demo.png")
 # cv.namedWindow("org", cv.WINDOW_AUTOSIZE)
 cv.imshow("test", src)
-# cv.imwrite('d:/1.png',src)
+gray = cv.cvtColor(src, cv.COLOR_BGR2GRAY)
+cv.imwrite('d:/1.png',gray)
 image_info(src)
-video_demo()
+# video_demo()
 cv.waitKey(0)
 cv.destroyAllWindows()
 
